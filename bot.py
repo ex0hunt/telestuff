@@ -25,10 +25,6 @@ class TeleBot:
                     self.bot.kickChatMember(chat_id, m.message.from_user.id)
                     self.bot.sendMessage(chat_id=chat_id, text='%s отправлен в Вальхаллу [SPAM]' % m.message.from_user.name)
 
-            if m.message.document:
-                botfile = self.bot.getFile(m.message.document.file_id)
-                m.message.text = botfile.file_path
-
             update_id = m.update_id
 
             self.confirm_updates(update_id)
