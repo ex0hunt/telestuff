@@ -31,11 +31,11 @@ class TeleBot:
                     try:
                         self.bot.kickChatMember(chat_id, m.message.from_user.id)
                         self.bot.sendMessage(chat_id=chat_id,
-                                             text='%s отправлен в Вальхаллу [SPAM]' % m.message.from_user.name)
+                                             text='%s отправлен в Вальхаллу [🔥SPAM]' % m.message.from_user.name)
                     except Exception as e:
                         print(e)
                         self.bot.sendMessage(chat_id=chat_id,
-                                             text='%s спамит, но кикнуть не могу' % m.message.from_user.name)
+                                             text='%s спамит, но забанить не могу 😭' % m.message.from_user.name)
 
             self.confirm_updates(m.update_id)
 
